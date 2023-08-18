@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "start": "tauri dev",
-    "build-debug": "yarn tauri build --debug",
-    "build-release": "yarn tauri build --release",
+    "build-debug": "tauri build --debug",
+    "build-release": "tauri build",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
