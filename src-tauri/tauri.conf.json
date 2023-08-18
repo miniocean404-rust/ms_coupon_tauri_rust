@@ -35,6 +35,8 @@
     },
     "windows": [
       {
+        "x": 1500,
+        "y": 500,
         "width": 400,
         "height": 300,
         "decorations": false,
