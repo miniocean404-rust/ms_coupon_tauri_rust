@@ -2,14 +2,21 @@ import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import { invoke } from '@tauri-apps/api/tauri'
 import './App.css'
+import { sign } from './utils/mt/guard/index'
 
 function App() {
   const [greetMsg, setGreetMsg] = useState('')
   const [name, setName] = useState('')
 
   useEffect(() => {
+    init()
     return () => {}
   }, [])
+
+  const init = async () => {
+    const request = await sign('fullUrl.href', {}, '', '')
+    console.log(request)
+  }
 
   async function greet() {
     // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
